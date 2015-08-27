@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<?=$this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?=$this->headTitle( $this->translate('Control Panel'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?=$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0')->appendHttpEquiv('X-UA-Compatible', 'IE=edge'); ?>
+        <!-- Le styles -->
+        <?=$this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+            ->prependStylesheet($this->basePath('assets/css/bootstrap.css'))
+            ->prependStylesheet($this->basePath('assets/css/AdminLTE.css'))
+            ->prependStylesheet($this->basePath('assets/css/skin-blue.css'))
+            ->prependStylesheet($this->basePath('assets/css/font-awesome.min.css'))
+        ; ?>
+    </head>
+    <body class="skin-blue sidebar-mini">
+        <?=$this->partial('layout/main'); ?>
+        <!-- Scripts -->
+        <?=$this->headScript()
+            ->prependFile($this->basePath('assets/js/app.js'))
+            ->prependFile($this->basePath('assets/js/quyen.js'))
+            ->prependFile($this->basePath('assets/js/bootstrap.min.js'))
+            ->prependFile($this->basePath('assets/js/jquery.min.js'))
+        ; ?>
+    </body>
+</html>
